@@ -18,4 +18,15 @@ headers = {'Content-Type': 'application/json'}
 
 response = req.post(url, data=temp, headers=headers).json()
 
-print(response['Value'])
+print(response['Value'][0])
+
+# python_dict = json.loads(response['Value'])
+# python_dict[0]
+
+# print(python_dict[0]['Client']['LastName'],
+#       python_dict[0]['Client']['FirstName'],
+#       python_dict[0]['PickUpTimeStr'],
+#       python_dict[0]['AddressFrom']['Street'],
+#       python_dict[0]['AddressFrom']['City'],
+#       python_dict[0]['AddressTo']['Street'],
+#       python_dict[0]['AddressTo']['City'])
